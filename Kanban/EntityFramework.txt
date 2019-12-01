@@ -1,0 +1,26 @@
+﻿-- INSTRUÇÕES SOBRE O EF CORE --
+
+	1) Instalar o EF Core no projeto
+	> Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version:2.1.11 -Project:Repository (pelo console OU 
+		- Dependences > botão direito > gerenciador > ver versão Microsoft Asp v 2.1.1 ---- o EF deve ter a mesma versão para funcionar
+		- pesquisa: Microsoft.EntityFrameworkCore.SqlServer > mudar versão para 2.1.11)
+
+	2) Criar as Classes de Modelo
+	
+	3) Gerar a Classe de Contexto
+	   - Herdar do DbContext
+	   - Criar o Construtor
+	   - Criar o DBSet de cada classe de modelo
+
+	4) Configurar o serviço/injeção de dependênica no BD na Classe Starup.cs
+	> Ir no Startup.cs - ConfigureServices e colocar: services.AddDbContext<Context>
+	(options => options.UseSqlServer(Configuration.GetConnectionString("EcommerceConection")));
+
+	5) Criar a string de conexão no arquivo appsettings.json
+
+	6 - Não é necessário o comando Enamblr-Migration
+
+	7 - Adicionar a migração e atualizar o banco
+	  - Add-Migration NomeMigracao -Project: Repository; Update-Database -verbose -Project: Repository
+
+

@@ -1,0 +1,43 @@
+﻿@model Projeto
+
+<form asp-action="Cadastrar" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Cadastrar Projeto</legend>
+
+        <div asp-validation-summary="ModelOnly" class="text-primary"></div>
+        <div class="form-group" id="NomeProjeto">
+            <label asp-for="NomeProjeto"></label>
+            <input type="text" asp-for="NomeProjeto" class="form-control" />
+            <span asp-validation-for="NomeProjeto" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="DescricaoProjeto">
+            <label asp-for="DescricaoProjeto"></label>
+            <input type="text" asp-for="DescricaoProjeto" class="form-control" />
+            <span asp-validation-for="DescricaoProjeto" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="NomeEmpresa">
+            <label asp-for="NomeEmpresa"></label>
+            <input type="text" asp-for="NomeEmpresa" class="form-control" />
+            <span asp-validation-for="NomeEmpresa" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="StatusProjeto">
+            <label asp-for="StatusProjeto"></label>
+            <input type="text" asp-for="StatusProjeto" class="form-control" />
+            <span asp-validation-for="StatusProjeto" class="text-primary"></span>
+        </div>
+
+        <div id="Categoria" class="form-group">
+            <label>Categoria:</label>
+            <select asp-items="@ViewBag.Categorias"
+                    class="form-control" name="drpCategorias">
+                <option> -- SELECIONE -- </option>
+            </select>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+    </fieldset>
+</form>
+

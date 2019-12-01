@@ -1,0 +1,43 @@
+﻿@model List<Projeto>
+@{
+    DateTime dataHora = ViewBag.DataHora;
+}
+
+<h2>Gerenciamento de Projetos</h2>
+<a class="btn btn-info" asp-action="Cadastrar">Cadastrar Projeto</a>
+
+<table style="margin-bottom:15px;margin-top:15px"
+       class="table table-hover table-striped">
+    <thead>
+        <tr class="table-active">
+            <th>Nome Projeto</th>
+            <th>Descrição Projeto</th>
+            <th>Nome Empresa</th>
+            <th>Data Criação</th>
+            <th>Status</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Projeto item in Model)
+        {
+        <tr>
+            <td>@item.NomeProjeto</td>
+            <td>@item.DescricaoProjeto</td>
+            <td>@item.NomeEmpresa</td>
+            <td>@item.DataCriacaoProjeto</td>
+            <td>@item.StatusProjeto</td>
+            <td>
+                <a class="btn btn-primary" asp-action="Remover" asp-route-id="@item.ProjetoId">Remover</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-action="Alterar" asp-route-id="@item.ProjetoId">Alterar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <b>Dados atualizados em: </b> @dataHora
+</p>

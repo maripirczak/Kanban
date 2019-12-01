@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanban", "Kanban\Kanban.csproj", "{FAFBFB31-C483-4C44-9A9B-3BAF09731223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{BA7FC480-E407-4EE0-AA35-F9E7619E7235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{1CABD770-42EB-4534-9315-7630A6E2FDB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAFBFB31-C483-4C44-9A9B-3BAF09731223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAFBFB31-C483-4C44-9A9B-3BAF09731223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAFBFB31-C483-4C44-9A9B-3BAF09731223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAFBFB31-C483-4C44-9A9B-3BAF09731223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7FC480-E407-4EE0-AA35-F9E7619E7235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7FC480-E407-4EE0-AA35-F9E7619E7235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7FC480-E407-4EE0-AA35-F9E7619E7235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7FC480-E407-4EE0-AA35-F9E7619E7235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CED9B7F-81FB-45F6-B4A9-F58543D437EF}
+	EndGlobalSection
+EndGlobal

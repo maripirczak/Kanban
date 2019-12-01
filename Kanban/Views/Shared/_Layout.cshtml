@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    @*Barra de Navegação*@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a asp-action="Index" asp-controller="Home" class="navbar-brand" asp-route-id="">Kanban</a>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index"
+                       asp-controller="Projeto">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tarefas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Departamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Funcionários</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    @* Conteúdo *@
+    <div class="m-5">
+        @RenderBody()
+    </div>
+
+    @* Rodapé *@
+    <hr />
+    <footer>
+        <p style="text-align:center">
+            &copy; @DateTime.Now.Year - Desenvolvido por Mariane Pirczak
+        </p>
+    </footer>
+
+</body>
+</html>

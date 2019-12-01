@@ -3,8 +3,8 @@
     DateTime dataHora = ViewBag.DataHora;
 }
 
-<h2>Gerenciamento de Projetos</h2>
-<a class="btn btn-info" asp-action="Cadastrar">Cadastrar Projeto</a>
+<h2>Projetos</h2>
+<a class="btn btn-primary btn-lg" asp-action="Cadastrar">Cadastrar Projeto</a>
 
 <table style="margin-bottom:15px;margin-top:15px"
        class="table table-hover table-striped">
@@ -15,6 +15,7 @@
             <th>Nome Empresa</th>
             <th>Data Criação</th>
             <th>Status</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -29,10 +30,13 @@
             <td>@item.DataCriacaoProjeto</td>
             <td>@item.StatusProjeto</td>
             <td>
-                <a class="btn btn-primary" asp-action="Remover" asp-route-id="@item.ProjetoId">Remover</a>
+                <a class="btn btn-danger" asp-action="Remover" asp-route-id="@item.ProjetoId">Remover</a>
             </td>
             <td>
-                <a class="btn btn-danger" asp-action="Alterar" asp-route-id="@item.ProjetoId">Alterar</a>
+                <a class="btn btn-warning" asp-action="Alterar" asp-route-id="@item.ProjetoId">Alterar</a>
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Ver Jobs" asp-route-id="@item.ProjetoId">Ver Jobs</a>
             </td>
         </tr>
         }

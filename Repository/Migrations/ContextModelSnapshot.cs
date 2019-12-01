@@ -103,19 +103,6 @@ namespace Repository.Migrations
                     b.ToTable("Projetos");
                 });
 
-            modelBuilder.Entity("Domain.Status", b =>
-                {
-                    b.Property<int>("StatusId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("TipoStatus");
-
-                    b.HasKey("StatusId");
-
-                    b.ToTable("Status");
-                });
-
             modelBuilder.Entity("Domain.Tarefa", b =>
                 {
                     b.Property<int>("TarefaId")

@@ -53,11 +53,12 @@ namespace Repository
             return result;
         }
 
-        public void ExluirProjeto(Projeto p)
+        public void ExluirProjeto(int id)
         {
-            _context.Projetos.Remove(p);
+            _context.Projetos.Remove(BuscarProjetoPorId(id));
             _context.SaveChanges();
 
         }
+
     }
 }

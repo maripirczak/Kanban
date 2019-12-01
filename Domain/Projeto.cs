@@ -36,11 +36,6 @@ namespace Domain
 
         public List<Job> Jobs { get; set; }
 
-        //ToString
-        public override string ToString()
-        {
-            return "Nome Projeto: " + NomeProjeto + " | Descrição Projeto: " + DescricaoProjeto + " | Data Criação Projeto: " + DataCriacaoProjeto
-                + "| Status: " + StatusProjeto;
-        }
+
     }
 }

@@ -1,0 +1,49 @@
+﻿@model Job
+
+<form asp-action="Cadastrar" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Cadastrar Job</legend>
+
+        <div asp-validation-summary="ModelOnly" class="text-primary"></div>
+        <div class="form-group" id="TituloJob">
+            <label asp-for="TituloJob">Título Job</label>
+            <input type="text" asp-for="TituloJob" class="form-control" />
+            <span asp-validation-for="TituloJob" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="DescricaoJob">
+            <label asp-for="DescricaoJob">Descrição Job</label>
+            <input type="text" asp-for="DescricaoJob" class="form-control" />
+            <span asp-validation-for="DescricaoJob" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="DataEntregaJob">
+            <label asp-for="DataEntregaJob">Data de Entrega</label>
+            <input type="date" asp-for="DataEntregaJob" class="form-control" />
+            <span asp-validation-for="DataEntregaJob" class="text-primary"></span>
+        </div>
+
+        <div class="form-group" id="StatusJob">
+            <label asp-for="StatusJob"> Status</label>
+            <select class="form-control">
+                <option> -- SELECIONE -- </option>
+                <option>Novo</option>
+                <option>Desenvolvimento</option>
+                <option>Concluido</option>
+            </select>
+        </div>
+
+        <!--
+    <div class="form-group" id="StatusJob">
+        <label asp-for="StatusJob"></label>
+        <select class="form-control">
+            <option> -- SELECIONE -- </option>
+            <option>Novo</option>
+            <option>Desenvolvimento</option>
+            <option>Concluido</option>
+        </select>
+    </div>-->
+
+        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+    </fieldset>
+</form>

@@ -38,14 +38,39 @@ namespace Kanban.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Projeto p)
         {
-            ViewBag.Categorias = new SelectList(_projetoDAO.ListarProjetos(), "ProjetoId", "NomeProjeto");
-
             if (ModelState.IsValid)
             {
                 _projetoDAO.CadastrarNovoProjeto(p);
                 return View(p);
             }
             return View(p);
+        }
+
+
+        public IActionResult Remover(int id)
+        {
+            if (id != null)
+            {
+                _projetoDAO.ExluirProjeto(id);
+            }
+            else
+            {
+                //Redirecionar para uma página de erro
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        public IActionResult Alterar(int id)
+        {
+            return View(_projetoDAO.BuscarProjetoPorId(id));
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(Projeto p)
+        {
+            _projetoDAO.EditarProjeto(p);
+            return RedirectToAction("Index");
         }
 
     }

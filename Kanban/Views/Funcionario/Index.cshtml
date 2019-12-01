@@ -1,0 +1,29 @@
+﻿@model List<Funcionario>
+@{
+    DateTime dataHora = ViewBag.DataHora;
+}
+
+<h2>Funcionario</h2>
+<a class="btn btn-primary btn-lg" asp-action="Cadastrar">Cadastrar Funcioário</a>
+
+<table style="margin-bottom:15px;margin-top:15px"
+       class="table table-hover table-striped">
+    <thead>
+        <tr class="table-active">
+            <th>Nome do Funcionário</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Funcionario item in Model)
+        {
+        <tr>
+            <td>@item.NomeFuncionario</td>
+            <td>@item.CpfFuncionario</td>
+        </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <b>Dados atualizados em: </b> @dataHora
+</p>

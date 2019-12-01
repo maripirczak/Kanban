@@ -1,0 +1,49 @@
+﻿@model List<Job>
+@{
+    DateTime dataHora = ViewBag.DataHora;
+}
+
+<h2>Jobs</h2>
+<a class="btn btn-primary btn-lg" asp-action="Cadastrar">Cadastrar Job</a>
+
+<table style="margin-bottom:15px;margin-top:15px"
+       class="table table-hover table-striped">
+    <thead>
+        <tr class="table-active">
+            <th>Titulo Job</th>
+            <th>Descrição Job</th>
+            <th>Data Criação</th>
+            <th>Data Entrega</th>
+            <th>Status</th>
+            <th>Departamento Responsável</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Job item in Model)
+        {
+        <tr>
+            <td>@item.TituloJob</td>
+            <td>@item.DescricaoJob</td>
+            <td>@item.DataCriacaoJob</td>
+            <td>@item.DataEntregaJob</td>
+            <td>@item.StatusJob</td>
+            <td>@item.DptoResponsavel</td>
+            <td>
+                <a class="btn btn-danger" asp-action="Remover" asp-route-id="@item.JobId">Remover</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Alterar" asp-route-id="@item.JobId">Alterar</a>
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Ver Tarefas" asp-route-id="@item.JobId">Ver Jobs</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <b>Dados atualizados em: </b> @dataHora
+</p>

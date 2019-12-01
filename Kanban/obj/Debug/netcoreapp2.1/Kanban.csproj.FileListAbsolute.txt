@@ -30,3 +30,10 @@ C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Kanban.csproj.CopyComple
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Kanban.dll
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Kanban.pdb
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Projeto\Cadastrar.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Projeto\Alterar.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Job\Index.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Job\Cadastrar.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Index.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Cadastrar.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Index.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Cadastrar.g.cshtml.cs

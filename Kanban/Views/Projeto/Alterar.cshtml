@@ -1,0 +1,42 @@
+﻿@model Projeto
+
+<form asp-action="Alterar" method="post">
+    <fieldset>
+        <legend>Alterar Projeto</legend>
+
+        <input type="hidden" asp-for="ProjetoId" />
+        <div class="form-group">
+            <label>Id:</label>
+            <input type="text" asp-for="ProjetoId"
+                   readonly="" class="form-control" />
+        </div>
+
+        <div class="form-group" id="NomeProjeto">
+            <label>NomeProjeto"</label>
+            <input type="text" asp-for="NomeProjeto" class="form-control" />
+        </div>
+
+        <div class="form-group" id="DescricaoProjeto">
+            <label>DescricaoProjeto"</label>
+            <input type="text" asp-for="DescricaoProjeto" class="form-control" />
+        </div>
+
+        <div class="form-group" id="NomeEmpresa">
+            <label>NomeEmpresa</label>
+            <input type="text" asp-for="NomeEmpresa" class="form-control" />
+        </div>
+
+        <div class="form-group" id="StatusProjeto">
+            <label>StatusProjeto</label>
+            <select class="form-control">
+                <option> -- SELECIONE -- </option>
+                <option>Novo</option>
+                <option>Desenvolvimento</option>
+                <option>Concluido</option>
+            </select>
+        </div>
+
+
+        <input type="submit" class="btn btn-primary" value="Salvar" />
+    </fieldset>
+</form>

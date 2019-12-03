@@ -37,3 +37,5 @@ C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Departamento
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Cadastrar.g.cshtml.cs
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Index.g.cshtml.cs
 C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Cadastrar.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Tarefa\Index.g.cshtml.cs
+C:\Users\marip\C#\Kanban\Kanban\obj\Debug\netcoreapp2.1\Razor\Views\Tarefa\Cadastrar.g.cshtml.cs

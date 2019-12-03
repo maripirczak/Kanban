@@ -36,7 +36,7 @@
                 <a class="btn btn-warning" asp-action="Alterar" asp-route-id="@item.ProjetoId">Alterar</a>
             </td>
             <td>
-                <a class="btn btn-info" asp-action="Ver Jobs" asp-route-id="@item.ProjetoId">Ver Jobs</a>
+                <a class="btn btn-info" asp-action="Index"asp-controller="Job" asp-route-id="@item.ProjetoId">Ver Jobs</a>
             </td>
         </tr>
         }

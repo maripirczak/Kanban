@@ -73,5 +73,12 @@ namespace Kanban.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult VerJobs(int id)
+        {
+            return View(_jobDAO.BuscarJobPorId(id));
+        }
+
+
+
     }
 }

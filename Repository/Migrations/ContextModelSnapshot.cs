@@ -65,7 +65,7 @@ namespace Repository.Migrations
 
                     b.Property<int>("ProjetoId");
 
-                    b.Property<string>("StatusJob");
+                    b.Property<int?>("StatusJobTipoStatusId");
 
                     b.Property<string>("TituloJob");
 
@@ -74,6 +74,8 @@ namespace Repository.Migrations
                     b.HasIndex("DptoResponsavelDepartamentoId");
 
                     b.HasIndex("ProjetoId");
+
+                    b.HasIndex("StatusJobTipoStatusId");
 
                     b.ToTable("Jobs");
                 });
@@ -96,9 +98,11 @@ namespace Repository.Migrations
                     b.Property<string>("NomeProjeto")
                         .IsRequired();
 
-                    b.Property<string>("StatusProjeto");
+                    b.Property<int?>("StatusProjetoTipoStatusId");
 
                     b.HasKey("ProjetoId");
+
+                    b.HasIndex("StatusProjetoTipoStatusId");
 
                     b.ToTable("Projetos");
                 });
@@ -119,7 +123,7 @@ namespace Repository.Migrations
 
                     b.Property<int?>("ResponsavelFuncionarioId");
 
-                    b.Property<string>("StatusTarefa");
+                    b.Property<int?>("StatusTarefaTipoStatusId");
 
                     b.Property<string>("TituloTarefa");
 
@@ -129,7 +133,22 @@ namespace Repository.Migrations
 
                     b.HasIndex("ResponsavelFuncionarioId");
 
+                    b.HasIndex("StatusTarefaTipoStatusId");
+
                     b.ToTable("Tarefas");
+                });
+
+            modelBuilder.Entity("Domain.TipoStatus", b =>
+                {
+                    b.Property<int>("TipoStatusId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeStatus");
+
+                    b.HasKey("TipoStatusId");
+
+                    b.ToTable("TipoStatus");
                 });
 
             modelBuilder.Entity("Domain.Job", b =>
@@ -142,6 +161,17 @@ namespace Repository.Migrations
                         .WithMany("Jobs")
                         .HasForeignKey("ProjetoId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Domain.TipoStatus", "StatusJob")
+                        .WithMany()
+                        .HasForeignKey("StatusJobTipoStatusId");
+                });
+
+            modelBuilder.Entity("Domain.Projeto", b =>
+                {
+                    b.HasOne("Domain.TipoStatus", "StatusProjeto")
+                        .WithMany()
+                        .HasForeignKey("StatusProjetoTipoStatusId");
                 });
 
             modelBuilder.Entity("Domain.Tarefa", b =>
@@ -154,6 +184,10 @@ namespace Repository.Migrations
                     b.HasOne("Domain.Funcionario", "Responsavel")
                         .WithMany()
                         .HasForeignKey("ResponsavelFuncionarioId");
+
+                    b.HasOne("Domain.TipoStatus", "StatusTarefa")
+                        .WithMany()
+                        .HasForeignKey("StatusTarefaTipoStatusId");
                 });
 #pragma warning restore 612, 618
         }

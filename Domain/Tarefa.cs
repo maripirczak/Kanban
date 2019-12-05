@@ -31,7 +31,7 @@ namespace Domain
 
         public Funcionario Responsavel { get; set; }
 
-        public string StatusTarefa { get; set; }
+        public TipoStatus StatusTarefa { get; set; }
 
 
     }

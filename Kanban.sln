@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanban", "Kanban\Kanban.csproj", "{FAFBFB31-C483-4C44-9A9B-3BAF09731223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{BA7FC480-E407-4EE0-AA35-F9E7619E7235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{BA7FC480-E407-4EE0-AA35-F9E7619E7235}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{1CABD770-42EB-4534-9315-7630A6E2FDB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{1CABD770-42EB-4534-9315-7630A6E2FDB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{F1FBE12F-038D-4CF4-BFA3-E9C71ABDD94E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CABD770-42EB-4534-9315-7630A6E2FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FBE12F-038D-4CF4-BFA3-E9C71ABDD94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FBE12F-038D-4CF4-BFA3-E9C71ABDD94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FBE12F-038D-4CF4-BFA3-E9C71ABDD94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FBE12F-038D-4CF4-BFA3-E9C71ABDD94E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

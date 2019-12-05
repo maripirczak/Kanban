@@ -4,7 +4,7 @@
 }
 
 <h2>Jobs</h2>
-<a class="btn btn-primary btn-lg" asp-action="Cadastrar">Cadastrar Job</a>
+<a class="btn btn-primary btn-lg" asp-controller="Job" asp-action="Cadastrar" asp-route-id="@ViewBag.ProjetoId">Cadastrar Job</a>
 
 <table style="margin-bottom:15px;margin-top:15px"
        class="table table-hover table-striped">
@@ -29,8 +29,8 @@
             <td>@item.DescricaoJob</td>
             <td>@item.DataCriacaoJob</td>
             <td>@item.DataEntregaJob</td>
-            <td>@item.StatusJob</td>
-            <td>@item.DptoResponsavel</td>
+            <td>@item.StatusJob.NomeStatus</td>
+            <td>@item.DptoResponsavel.NomeDepartamento</td>
             <td>
                 <a class="btn btn-danger" asp-action="Remover" asp-route-id="@item.JobId">Remover</a>
             </td>
@@ -38,7 +38,7 @@
                 <a class="btn btn-warning" asp-action="Alterar" asp-route-id="@item.JobId">Alterar</a>
             </td>
             <td>
-                <a class="btn btn-info" asp-action="Ver Tarefas" asp-route-id="@item.JobId">Ver Jobs</a>
+                <a class="btn btn-info" asp-action="Index"asp-controller="Tarefa" asp-route-id="@item.JobId">Ver Tarefas</a>
             </td>
         </tr>
         }

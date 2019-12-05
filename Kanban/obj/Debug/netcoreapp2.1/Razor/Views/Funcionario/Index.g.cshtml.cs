@@ -61,7 +61,7 @@ using Domain;
             WriteLiteral("\r\n<h2>Funcionario</h2>\r\n");
             EndContext();
             BeginContext(100, 81, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b6b271f2439491284bb57fd04ea1c14", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ffed6ce5bfdf415191568d6a2e78a0ab", async() => {
                 BeginContext(157, 20, true);
                 WriteLiteral("Cadastrar Funcioário");
                 EndContext();

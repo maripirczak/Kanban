@@ -27,14 +27,14 @@ namespace Repository
 
         public List<Tarefa> ListarTarefas()
         {
-            List<Tarefa> ListTarefas = _context.Tarefas.Include("Responsavel").ToList();
+            List<Tarefa> ListTarefas = _context.Tarefas.Include("Responsavel").Include("StatusTarefa").ToList();
             return ListTarefas;
         }
 
         //metodo que localiza o campo da chave primaria e busca
         public Tarefa BuscarTarefaoPorId(int id)
         {
-            Tarefa tarefa = _context.Tarefas.Include("Responsavel").FirstOrDefault(t => t.TarefaId == id);
+            Tarefa tarefa = _context.Tarefas.Include("Responsavel").Include("StatusTarefa").FirstOrDefault(t => t.TarefaId == id);
 
             return tarefa;
         }
@@ -54,9 +54,9 @@ namespace Repository
 
         }
 
-        public void ExluirTarefa(Tarefa t)
+        public void ExluirTarefa(int id)
         {
-            _context.Tarefas.Remove(t);
+            _context.Tarefas.Remove(BuscarTarefaoPorId(id));
             _context.SaveChanges();
         }
     }

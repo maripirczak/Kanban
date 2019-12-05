@@ -3,6 +3,7 @@
 <form asp-action="Cadastrar" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Cadastrar Job</legend>
+        <input type="hidden" name="hdnProjetoId" value="@ViewBag.Projetoid" />
 
         <div asp-validation-summary="ModelOnly" class="text-primary"></div>
         <div class="form-group" id="TituloJob">
@@ -23,7 +24,14 @@
             <span asp-validation-for="DataEntregaJob" class="text-primary"></span>
         </div>
 
-        <div class="form-group" id="StatusJob">
+        <div class="form-group" id="NomeStatus">
+            <label>Status</label>
+            <select asp-items="@ViewBag.NomeStatus" class="form-control" name="dprNomeStatus">
+                <option> -- SELECIONE -- </option>
+            </select>
+        </div>
+
+        <!--<div class="form-group" id="StatusJob">
             <label asp-for="StatusJob"> Status</label>
             <select class="form-control">
                 <option> -- SELECIONE -- </option>
@@ -31,11 +39,11 @@
                 <option>Desenvolvimento</option>
                 <option>Concluido</option>
             </select>
-        </div>
+        </div>-->
 
         <div class="form-group" id="DptoResponsavel">
             <label>Departamento Responsável</label>
-            <select asp-items="@ViewBag.DptoResponsavel"class="form-control" name="dprDptoResponsavel">
+            <select asp-items="@ViewBag.DptoResponsavel" class="form-control" name="dprDptoResponsavel">
                 <option> -- SELECIONE -- </option>
             </select>
         </div>

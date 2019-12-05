@@ -22,12 +22,13 @@ namespace Repository
             _context.SaveChanges();
         }
 
-        public List<Projeto> ListarProjetos() => _context.Projetos.ToList();
+        public List<Projeto> ListarProjetos() => _context.Projetos.Include("StatusProjeto").ToList();
 
 
         //metodo que localiza o campo da chave primaria e busca
         public Projeto BuscarProjetoPorId(int id)
         {
+
             return _context.Projetos.Find(id);
         }
 
@@ -48,10 +49,18 @@ namespace Repository
 
         public List<Job> ListaJobsProjetoID(int pID)
         {
-            var result = _context.Jobs.Include("DptoResponsavel").Where(jl => jl.ProjetoId == pID).ToList();
+            var result = _context.Jobs.Include("DptoResponsavel").Include("StatusJob").Where(jl => jl.ProjetoId == pID).ToList();
+            //var result = _context.Jobs.Where(jl => jl.ProjetoId == pID).ToList();         
 
             return result;
         }
+
+
+        public List<Job> ListarJobsPorProjetoIdApi(int? id)
+        {
+            return _context.Jobs.Where(j => j.ProjetoId == id).ToList();
+        }
+
 
         public void ExluirProjeto(int id)
         {

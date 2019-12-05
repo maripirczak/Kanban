@@ -29,7 +29,7 @@ namespace Domain
 
         public DateTime DataEntregaJob { get; set; }
 
-        public string StatusJob { get; set; }
+        public TipoStatus StatusJob { get; set; }
 
         public Departamento DptoResponsavel { get; set; }
 

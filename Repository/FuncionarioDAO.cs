@@ -57,5 +57,12 @@ namespace Repository
             }
 
         }
+
+        public Funcionario ListarFuncionariosPorId(int id)
+        {
+            Funcionario funcionario = _context.Funcionarios.FirstOrDefault(d => d.FuncionarioId == id);
+            return funcionario;
+        }
+
     }
 }

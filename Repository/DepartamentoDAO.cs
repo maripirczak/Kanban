@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 using Repository;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,12 @@ namespace Repository
             return _context.Departamentos.ToList();
         }
 
+        public Departamento ListarDepartamentosPorId(int id)
+        {
+            Departamento departamento = _context.Departamentos.FirstOrDefault(d => d.DepartamentoId == id);
+            return departamento;
+        }
 
-
-
-
-
+  
     }
 }

@@ -39,6 +39,7 @@ namespace Kanban
             services.AddScoped<TarefaDAO>();
             services.AddScoped<DepartamentoDAO>();
             services.AddScoped<FuncionarioDAO>();
+            services.AddScoped<StatusDAO>();
 
             services.AddDbContext<Context>
              (options => options.UseSqlServer

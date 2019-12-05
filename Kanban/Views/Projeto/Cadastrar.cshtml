@@ -23,15 +23,22 @@
             <span asp-validation-for="NomeEmpresa" class="text-primary"></span>
         </div>
 
-        <div class="form-group"  id="StatusProjeto">
-            <label asp-for="StatusProjeto"></label>
-            <select class="form-control">
+        <div class="form-group" id="NomeStatus">
+            <label>Status</label>
+            <select asp-items="@ViewBag.NomeStatus" class="form-control" name="dprNomeStatus">
                 <option> -- SELECIONE -- </option>
-                <option>Novo</option>
-                <option>Desenvolvimento</option>
-                <option>Concluido</option>
             </select>
         </div>
+
+        <!-- <div class="form-group" id="StatusProjeto">
+         <label asp-for="StatusProjeto"></label>
+         <select class="form-control">
+             <option> -- SELECIONE -- </option>
+             <option>Novo</option>
+             <option>Desenvolvimento</option>
+             <option>Concluido</option>
+         </select>
+     </div>-->
 
 
         <input type="submit" class="btn btn-primary" value="Cadastrar" />

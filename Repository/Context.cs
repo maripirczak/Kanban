@@ -14,6 +14,7 @@ namespace Repository
         public DbSet<Tarefa> Tarefas { get; set; }
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<TipoStatus> TipoStatus { get; set; }
 
     }
 

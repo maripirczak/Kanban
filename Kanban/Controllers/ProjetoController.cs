@@ -15,12 +15,14 @@ namespace Kanban.Controllers
 
         private readonly ProjetoDAO _projetoDAO;
         private readonly JobDAO _jobDAO;
+        private readonly StatusDAO _statusDAO;
         private readonly IHostingEnvironment _hosting;
 
-        public ProjetoController(ProjetoDAO projetoDAO, JobDAO jobDAO, IHostingEnvironment hosting)
+        public ProjetoController(ProjetoDAO projetoDAO, JobDAO jobDAO, StatusDAO statusDAO, IHostingEnvironment hosting)
         {
             _projetoDAO = projetoDAO;
             _jobDAO = jobDAO;
+            _statusDAO = statusDAO;
             _hosting = hosting;
         }
 
@@ -32,14 +34,18 @@ namespace Kanban.Controllers
 
         public IActionResult Cadastrar()
         {
+            ViewBag.NomeStatus = new SelectList(_statusDAO.ListarStatusPorNome(), "TipoStatusId", "NomeStatus");
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Projeto p)
+        public IActionResult Cadastrar(Projeto p, int dprNomeStatus)
         {
+            ViewBag.NomeStatus = new SelectList(_statusDAO.ListarStatusPorNome(), "TipoStatusId", "NomeStatus");
+
             if (ModelState.IsValid)
             {
+                p.StatusProjeto = _statusDAO.ListarStatusPorId(dprNomeStatus);
                 _projetoDAO.CadastrarNovoProjeto(p);
                 return View(p);
             }

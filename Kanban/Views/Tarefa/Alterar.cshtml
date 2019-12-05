@@ -1,0 +1,52 @@
+﻿@model Tarefa
+
+<form asp-action="Alterar" method="post">
+    <fieldset>
+        <legend>Alterar Tarefa</legend>
+
+        <input type="hidden" name="hdnJobId" value="@ViewBag.Jobid" />
+
+        <div class="form-group">
+            <label>Id:</label>
+            <input type="text" asp-for="TarefaId" readonly="" class="form-control" />
+        </div>
+
+        <div class="form-group" id="TituloTarefa">
+            <label>Titulo Tarefa</label>
+            <input type="text" asp-for="TituloTarefa" class="form-control" />
+        </div>
+
+        <div class="form-group" id="DescricaoTarefa">
+            <label>Descrição Tarefa</label>
+            <input type="text" asp-for="DescricaoTarefa" class="form-control" />
+        </div>
+
+        <div class="form-group" id="DataEntregaTarefa">
+            <label>Data Entrega da Tarefa</label>
+            <input type="date" asp-for="DataEntregaTarefa" class="form-control" />
+        </div>
+
+
+        <div class="form-group" id="Responsavel">
+            <label>Responsável</label>
+            <select asp-items="@ViewBag.Responsavel" class="form-control" name="dprResponsavel">
+                <option> -- SELECIONE -- </option>
+            </select>
+        </div>
+
+
+        <div class="form-group" id="StatusTarefa">
+            <label asp-for="StatusTarefa" name="dprStatusTarefa"></label>
+            <select class="form-control">
+                <option> -- SELECIONE -- </option>
+                <option>Novo</option>
+                <option>Desenvolvimento</option>
+                <option>Concluido</option>
+            </select>
+        </div>
+
+
+        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+    </fieldset>
+</form>
+

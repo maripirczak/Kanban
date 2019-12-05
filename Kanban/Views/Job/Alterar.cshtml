@@ -1,0 +1,48 @@
+﻿@model Job
+
+<form asp-action="Alterar" method="post">
+    <fieldset>
+        <legend>Alterar Job</legend>
+
+        <input type="hidden" name="hdnProjetoId" value="@ViewBag.Projetoid" />
+
+        <div class="form-group">
+            <label>Id:</label>
+            <input type="text" asp-for="JobId" readonly="" class="form-control" />
+        </div>
+               
+        <div class="form-group" id="TituloJob">
+            <label>Título Job</label>
+            <input type="text" asp-for="TituloJob" class="form-control"/>
+        </div>
+
+        <div class="form-group" id="DescricaoJob">
+            <label>Descrição Job</label>
+            <input type="text" asp-for="DescricaoJob" class="form-control"/>
+        </div>
+
+        <div class="form-group" id="DataEntregaJob">
+            <label>Data de Entrega</label>
+            <input type="date" asp-for="DataEntregaJob" class="form-control" />
+        </div>
+
+        <div class="form-group" id="StatusJob">
+            <label asp-for="StatusJob"> Status</label>
+            <select class="form-control">
+                <option> -- SELECIONE -- </option>
+                <option>Novo</option>
+                <option>Desenvolvimento</option>
+                <option>Concluido</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="DptoResponsavel">
+            <label>Departamento Responsável</label>
+            <select asp-items="@ViewBag.DptoResponsavel" class="form-control" name="dprDptoResponsavel">
+                <option> -- SELECIONE -- </option>
+            </select>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Salvar" />
+    </fieldset>
+</form>

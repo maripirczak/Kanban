@@ -67,6 +67,7 @@ namespace Kanban.Controllers
         public IActionResult Alterar(int id)
         {
             ViewBag.DptoResponsavel = new SelectList(_departamentoDAO.ListarDepartamentos(), "DepartamentoId", "NomeDepartamento");
+            ViewBag.NomeStatus = new SelectList(_statusDAO.ListarStatusPorNome(), "TipoStatusId", "NomeStatus");
             return View(_jobDAO.BuscarJobPorId(id));
         }
 

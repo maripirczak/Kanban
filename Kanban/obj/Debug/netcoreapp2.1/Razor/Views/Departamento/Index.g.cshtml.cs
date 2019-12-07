@@ -61,7 +61,7 @@ using Domain;
             WriteLiteral("\r\n<h2>Departamentos</h2>\r\n");
             EndContext();
             BeginContext(103, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d27dd7e8442494790186123a6b3773f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edc7474c31b2469b8d4801c7b4d47c18", async() => {
                 BeginContext(160, 22, true);
                 WriteLiteral("Cadastrar Departamento");
                 EndContext();

@@ -68,7 +68,7 @@ using Domain;
             WriteLiteral("\r\n<h2>Projetos</h2>\r\n");
             EndContext();
             BeginContext(93, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2dd944957c447be8b0e0b49dff29665", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "334029e795654b7c81553e718a1fec3b", async() => {
                 BeginContext(150, 17, true);
                 WriteLiteral("Cadastrar Projeto");
                 EndContext();
@@ -167,7 +167,7 @@ using Domain;
             WriteLiteral("</td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(934, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ddb8f34373b4f5685142944c989f18b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a93c0445936f41d18d1767a4d879b068", async() => {
                 BeginContext(1012, 7, true);
                 WriteLiteral("Remover");
                 EndContext();
@@ -203,7 +203,7 @@ using Domain;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1078, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e16a4ee10442bb919cca62b9cd933a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "95daba86125b4ca0968fe1e00c997676", async() => {
                 BeginContext(1157, 7, true);
                 WriteLiteral("Alterar");
                 EndContext();
@@ -239,7 +239,7 @@ using Domain;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1223, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5cf610389e0482b8b27b64d3fc7110d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "853df4e1ea8c4401a030255a0ab96a40", async() => {
                 BeginContext(1317, 8, true);
                 WriteLiteral("Ver Jobs");
                 EndContext();

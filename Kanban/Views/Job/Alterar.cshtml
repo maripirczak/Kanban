@@ -10,31 +10,43 @@
             <label>Id:</label>
             <input type="text" asp-for="JobId" readonly="" class="form-control" />
         </div>
-               
+
         <div class="form-group" id="TituloJob">
             <label>Título Job</label>
-            <input type="text" asp-for="TituloJob" class="form-control"/>
+            <input type="text" asp-for="TituloJob" class="form-control" />
         </div>
 
         <div class="form-group" id="DescricaoJob">
             <label>Descrição Job</label>
-            <input type="text" asp-for="DescricaoJob" class="form-control"/>
+            <input type="text" asp-for="DescricaoJob" class="form-control" />
         </div>
+
+        <div class="form-group" id="NomeResponsavel">
+            <label>Nome Responsavel</label>
+            <input type="text" asp-for="NomeResponsavel" class="form-control" />
 
         <div class="form-group" id="DataEntregaJob">
             <label>Data de Entrega</label>
             <input type="date" asp-for="DataEntregaJob" class="form-control" />
         </div>
 
-        <div class="form-group" id="StatusJob">
-            <label asp-for="StatusJob"> Status</label>
-            <select class="form-control">
+        <div class="form-group" id="NomeStatus">
+            <label>Status</label>
+            <select asp-items="@ViewBag.NomeStatus" class="form-control" name="dprNomeStatus">
                 <option> -- SELECIONE -- </option>
-                <option>Novo</option>
-                <option>Desenvolvimento</option>
-                <option>Concluido</option>
             </select>
         </div>
+
+
+        <!-- <div class="form-group" id="StatusJob">
+        <label asp-for="StatusJob"> Status</label>
+        <select class="form-control">
+            <option> -- SELECIONE -- </option>
+            <option>Novo</option>
+            <option>Desenvolvimento</option>
+            <option>Concluido</option>
+        </select>
+    </div>-->
 
         <div class="form-group" id="DptoResponsavel">
             <label>Departamento Responsável</label>
@@ -45,4 +57,4 @@
 
         <input type="submit" class="btn btn-primary" value="Salvar" />
     </fieldset>
-</form>
+    </form>

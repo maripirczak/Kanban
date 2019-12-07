@@ -13,7 +13,7 @@ namespace Domain
     {
         public Funcionario()
         {
-
+            Endereco = new Endereco();
         }
 
         [Key]
@@ -22,6 +22,8 @@ namespace Domain
         public string NomeFuncionario { get; set; }
 
         public string CpfFuncionario { get; set; }
+
+        public Endereco Endereco { get; set; }
 
         public string SenhaFuncionario { get; set; }
     }

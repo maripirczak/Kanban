@@ -19,7 +19,7 @@ namespace API.Controllers
             _projetoDAO = projetoDAO;
         }
 
-        //GET: /api/Projeto/ListarJobsPorProjetoIdApi/id
+        //GET: /api/Projeto/ListarJobsPorProjetoIdApi/2
         [HttpGet]
         [Route("ListarJobsPorProjetoIdApi/{id}")]
         public IActionResult ListarJobsPorProjetoIdApi(int id)
@@ -32,10 +32,37 @@ namespace API.Controllers
             return NotFound(new { msg = "Projeto não encontrado!" });
 
 
-            //return Ok(_projetoDAO.ListarJobsPorProjetoIdApi(id));
-    
+            //return Ok(_projetoDAO.ListarJobsPorProjetoIdApi(id));    
 
         }
 
+
+        [Route("api/[controller]")]
+        [ApiController]
+        public class JobAPIController : ControllerBase
+        {
+            private readonly JobDAO _jobDAO;
+            public JobAPIController(JobDAO jobDAO)
+            {
+                _jobDAO = jobDAO;
+            }
+
+            //GET: /api/Job/ListarTarefasPorJobIdApi/8015
+            [HttpGet]
+            [Route("ListarTarefasPorJobIdApi/{id}")]
+            public IActionResult ListarTarefasPorJobIdApi(int id)
+            {
+                List<Tarefa> t = _jobDAO.ListarTarefasPorJobIdApi(id);
+                if (t != null)
+                {
+                    return Ok(t);
+                }
+                return NotFound(new { msg = "Job não encontrado!" });
+
+
+            }
+
+
+        }
     }
-}
+    }

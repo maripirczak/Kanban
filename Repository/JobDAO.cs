@@ -47,6 +47,7 @@ namespace Repository
                 result.DataEntregaJob = jAlterado.DataEntregaJob;
                 result.StatusJob = jAlterado.StatusJob;
                 result.DptoResponsavel = jAlterado.DptoResponsavel;
+                result.NomeResponsavel = jAlterado.NomeResponsavel;
                 _context.SaveChanges();
             }
         }

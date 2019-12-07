@@ -25,6 +25,8 @@ namespace Domain
 
         public string DescricaoJob { get; set; }
 
+        public string NomeResponsavel { get; set; }
+
         public DateTime DataCriacaoJob { get; set; }
 
         public DateTime DataEntregaJob { get; set; }

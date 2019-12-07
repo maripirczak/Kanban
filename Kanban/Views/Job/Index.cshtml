@@ -16,6 +16,7 @@
             <th>Data Entrega</th>
             <th>Status</th>
             <th>Departamento Responsável</th>
+            <th>Nome Responsável</th>
             <th></th>
             <th></th>
             <th></th>
@@ -31,6 +32,7 @@
             <td>@item.DataEntregaJob</td>
             <td>@item.StatusJob.NomeStatus</td>
             <td>@item.DptoResponsavel.NomeDepartamento</td>
+            <td>@item.NomeResponsavel</td>
             <td>
                 <a class="btn btn-danger" asp-action="Remover" asp-route-id="@item.JobId">Remover</a>
             </td>
@@ -38,7 +40,7 @@
                 <a class="btn btn-warning" asp-action="Alterar" asp-route-id="@item.JobId">Alterar</a>
             </td>
             <td>
-                <a class="btn btn-info" asp-action="Index"asp-controller="Tarefa" asp-route-id="@item.JobId">Ver Tarefas</a>
+                <a class="btn btn-info" asp-action="Index" asp-controller="Tarefa" asp-route-id="@item.JobId">Ver Tarefas</a>
             </td>
         </tr>
         }

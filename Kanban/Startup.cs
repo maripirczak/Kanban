@@ -29,7 +29,7 @@ namespace Kanban
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -40,12 +40,17 @@ namespace Kanban
             services.AddScoped<DepartamentoDAO>();
             services.AddScoped<FuncionarioDAO>();
             services.AddScoped<StatusDAO>();
+            services.AddHttpContextAccessor();
 
             services.AddDbContext<Context>
              (options => options.UseSqlServer
              (Configuration.GetConnectionString
              ("KanbanConnection")));
 
+            //Configuração da sessão deve ser colocada ANTES
+            //do services.AddMvc()
+            services.AddSession();
+            services.AddDistributedMemoryCache();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

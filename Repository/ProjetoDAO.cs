@@ -35,15 +35,18 @@ namespace Repository
 
         public void EditarProjeto(Projeto pAlterado)
         {
-            var result = _context.Projetos.SingleOrDefault(p => p.ProjetoId == pAlterado.ProjetoId);
-            if (result != null)
-            {
-                result.NomeProjeto = pAlterado.NomeProjeto;
-                result.DescricaoProjeto = pAlterado.DescricaoProjeto;
-                result.NomeEmpresa = pAlterado.NomeEmpresa;
-                result.StatusProjeto = pAlterado.StatusProjeto;
-                _context.SaveChanges();
-            }
+
+           /* _context.Projetos.Update(p);
+            _context.SaveChanges();*/
+              var result = _context.Projetos.SingleOrDefault(p => p.ProjetoId == pAlterado.ProjetoId);
+              if (result != null)
+              {
+                  result.NomeProjeto = pAlterado.NomeProjeto;
+                  result.DescricaoProjeto = pAlterado.DescricaoProjeto;
+                  result.NomeEmpresa = pAlterado.NomeEmpresa;
+                  result.StatusProjeto = pAlterado.StatusProjeto;
+                  _context.SaveChanges();
+              }
 
         }
 
